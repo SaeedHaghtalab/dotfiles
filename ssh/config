@@ -1,0 +1,34 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+
+### LAB NETWORK
+Host ics-saeed-vm
+  HostName ics-saeed-vm.cslab.esss.lu.se
+
+Host nxbastion
+  HostName nxbastion.tn.esss.lu.se
+
+
+Host rems-vm-test
+  HostName rems-vm-test.cslab.esss.lu.se
+  User saeedhaghtalab
+
+Host rf-xtpico-vm
+  HostName rf-xtpico-vm.cslab.esss.lu.se
+  User saeedhaghtalab
+
+
+# TECHNICAL NETWORK
+Host odh-ioc
+  HostName odh-ioc.tn.esss.lu.se
+  User ess
+  ProxyJump nxbastion
+
+Host vbox-ioc-01
+  HostName vbox-ioc-01.tn.esss.lu.se
+  User saeedhaghtalab
+  ProxyJump nxbastion
+
+Host cooling-rfq
+  HostName cooling-rfq.tn.esss.lu.se
+  User saeedhaghtalab
+  ProxyJump nxbastion
